@@ -26,6 +26,16 @@ function capToFront(s) {
   //al principio de la palabra.
   //Ejemplo: soyHENRY -> HENRYsoy
   //Escribe tu código aquí
+  var may = [];
+  var min = [];
+  for (i=0; i<s.length; i++) {
+    if (s.charAt(i)===s.charAt(i).toUpperCase()) {
+    may.push(s.charAt(i));
+  } else {
+    min.push(s.charAt(i));
+    }
+  }
+  return may.join('') + min.join('');
 }
 
 
@@ -35,7 +45,13 @@ function asAmirror(str) {
   //pero con cada una de sus palabras invertidas, como si fuera un espejo.
   //Ej: Recibe ---> "The Henry Challenge is close!" || Devuelve ---> "ehT yrneH egnellahC si !esolc"
   //Escribe tu código aquí
-} 
+  var nomves = [];
+  var strnu = str.split(' ')
+  for (i=0; i<strnu.length; i++) {
+  nomves.push(strnu[i].split('').reverse().join(''))
+  }
+  return nomves.join(' ');
+}
 
 
 function capicua(numero){
